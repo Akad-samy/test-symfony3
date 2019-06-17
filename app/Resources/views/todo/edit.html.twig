@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <a href="/" class="btn btn-warning my-3">Back To Todos</a>
+
+        <h2 class="page-header my-2">Edit ToDo List</h2>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}

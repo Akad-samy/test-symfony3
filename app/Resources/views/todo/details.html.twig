@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <h2 class="page-header my-3">{{ todo.name }}</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Category: {{ todo.category }}</li>
+            <li class="list-group-item">Priority: {{ todo.priority }}</li>
+            <li class="list-group-item">Due_Date: <strong>{{ todo.dueDate|date('l jS \of F Y h:i:s A') }}</strong></li>
+        </ul>
+        <p class="lead my-3">
+            {{ todo.description }}
+        </p>
+
+        <hr>
+        <a href="/" class="btn btn-warning my-3">Back To Todos</a>
+
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
